@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const data = ["Andriod", "blackberry", "iphone", "windows"];
+  const dt = ["Samsung", "HTC", "Micromax", "Apple"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Mobile operating systems</h1>
+      {data.map((e) => (
+        <li>{e}</li>
+      ))}
+      <h1>Mobile Manufacturers</h1>
+      {dt.map((el) => (
+        <li>{el}</li>
+      ))}
     </div>
   );
+
+  // const dt = ["Samsung", "HTC", "Micromax", "Apple"];
+
+  // return <div>{data.map((e) => Userc(e))}</div>;
 }
+
+// function Userc(e) {
+//   return (
+//     <div>
+//       <div>{e}</div>
+//     </div>
+//   );
+// }
 
 export default App;
